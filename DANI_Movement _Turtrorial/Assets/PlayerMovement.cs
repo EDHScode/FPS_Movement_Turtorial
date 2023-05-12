@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 6f;
-
+    public float moveMultiplier = 10f;
     float rbDrag = 6f;
 
     float horizontalMovement;
@@ -47,6 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Acceleration);
+        rb.AddForce(moveDirection.normalized * moveSpeed * moveMultiplier, ForceMode.Acceleration);
     }
 }
