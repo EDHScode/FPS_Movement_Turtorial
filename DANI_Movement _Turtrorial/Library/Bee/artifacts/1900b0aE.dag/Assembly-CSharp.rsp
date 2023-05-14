@@ -347,7 +347,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/CameraController.cs"
 "Assets/CameraHolder.cs"
+"Assets/DoubleGrapple.cs"
 "Assets/PlayerMovement.cs"
+"Assets/SingleGrapple.cs"
+"Assets/WallRun.cs"
 -langversion:9.0
 
 /deterministic
