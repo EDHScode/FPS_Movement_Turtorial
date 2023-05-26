@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalMovement;
     float verticalMovement;
+    
 
     [Header("Sprinting")]
     [SerializeField] public float walkSpeed = 4f;
@@ -37,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
     float playerHeight = 2f;
     bool isGrounded;
     float groundDistance = 0.04f;
+
+    [Header("Gravity")]
+    [SerializeField] public float gravityMultiplier = 10f;
 
     [SerializeField] Transform orientation;
 
@@ -72,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update() 
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
+        GravityControlJumpPad();
         MyInput();
         ControlDrag(); 
         ControlSpeed();
@@ -156,5 +160,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(moveDirection.normalized * moveSpeed * moveMultiplier * airMultiplier, ForceMode.Acceleration);
         }
+
     }
+
+    void GravityControlJumpPad()
+    {
+        if (!Physics.Raycast(transform.position, Vector3.down, 10))
+        {
+            rb.AddForce(Vector3.down * gravityMultiplier, ForceMode.Acceleration);
+        }
+    }
+
+
 }

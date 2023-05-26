@@ -16,7 +16,7 @@ public class SingleGrapple : MonoBehaviour
     [Header("Swinging")]
     [SerializeField] private float maxSwingDistance = 25f;
     private Vector3 swingPoint;
-    private SpringJoint joint;
+    public SpringJoint joint;
 
     [Header("Air Movement")]
     public Transform orientation;
