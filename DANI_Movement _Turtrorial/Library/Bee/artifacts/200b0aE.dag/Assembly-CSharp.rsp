@@ -344,13 +344,12 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/CameraController.cs"
-"Assets/CameraHolder.cs"
-"Assets/DoubleGrapple.cs"
-"Assets/JumpPad_Boost.cs"
-"Assets/PlayerMovement.cs"
-"Assets/SingleGrapple.cs"
-"Assets/WallRun.cs"
+"Assets/Scripts/CameraController.cs"
+"Assets/Scripts/CameraHolder.cs"
+"Assets/Scripts/JumpPad_Boost.cs"
+"Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/SingleGrapple.cs"
+"Assets/Scripts/WallRun.cs"
 -langversion:9.0
 
 /deterministic
