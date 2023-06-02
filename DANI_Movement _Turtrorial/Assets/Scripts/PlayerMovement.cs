@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
     float playerHeight = 2f;
-    bool isGrounded;
-    float groundDistance = 0.04f;
+    [SerializeField] bool isGrounded;
+    float groundDistance = 0.3f;
 
     [Header("Gravity")]
     [SerializeField] public float gravityMultiplier = 10f;
